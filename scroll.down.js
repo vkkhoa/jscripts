@@ -25,7 +25,7 @@ function scroll() {
 }
 
 // Start scrolling
-timer = setInterval(scroll, 10);
+timer = setInterval(scroll, 12);
 
 // Add touch overlay div
 var touchLayer = document.createElement("div");
