@@ -56,6 +56,9 @@ function cancel(e) {
 	// Cancel the scrolling
 	clearInterval(timer);
 	timer = null;
+	
+	clearInterval(tmr);
+	tmr = null;
 
 }
 
