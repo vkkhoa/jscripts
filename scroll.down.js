@@ -24,6 +24,8 @@ function scroll() {
 
 }
 
+await new Promise(r => setTimeout(r, 8000));
+
 // Start scrolling
 timer = setInterval(scroll, 12);
 
