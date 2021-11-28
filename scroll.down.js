@@ -29,10 +29,14 @@ function delay() {
 	clearInterval(tmr);
 	tmr = null;
 	
+	// Add cancel listeners
+	touchLayer.addEventListener("touchstart", cancel, true);
+	touchLayer.addEventListener("mousedown", cancel, true);
+	
 	timer = setInterval(scroll, 12);
 }
 
-//await new Promise(r => setTimeout(r, 8000));
+// wait a while
 tmr = setTimeout(delay, 8000);
 
 // Start scrolling
@@ -62,6 +66,4 @@ function cancel(e) {
 
 }
 
-// Add cancel listeners
-touchLayer.addEventListener("touchstart", cancel, true);
-touchLayer.addEventListener("mousedown", cancel, true);
+
