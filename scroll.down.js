@@ -26,13 +26,14 @@ function scroll() {
 
 var tmr;
 function delay() {
-	timer = setInterval(scroll, 12);
 	clearInterval(tmr);
 	tmr = null;
+	
+	timer = setInterval(scroll, 12);
 }
 
 //await new Promise(r => setTimeout(r, 8000));
-tmr = setInterval(delay, 8000);
+tmr = setTimeout(delay, 8000);
 
 // Start scrolling
 
