@@ -49,6 +49,9 @@ function cancel(e) {
 	// Remove touch layer
 	touchLayer.parentNode && touchLayer.parentNode.removeChild(touchLayer);
 
+	clearTimeout(tmr);
+	tmr = null;
+	
 	// Ignore if cleared already
 	if (!timer)
 		return;
@@ -56,9 +59,6 @@ function cancel(e) {
 	// Cancel the scrolling
 	clearInterval(timer);
 	timer = null;
-	
-	clearInterval(tmr);
-	tmr = null;
 
 }
 
